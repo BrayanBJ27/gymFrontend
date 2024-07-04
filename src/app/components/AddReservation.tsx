@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -31,48 +33,52 @@ const AddReservation: React.FC<AddReservationProps> = ({ onAddReservation }) => 
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4">
-      <div className="mb-2">
-        <label className="block">Machine Name:</label>
+    <form onSubmit={handleSubmit} className="flex space-x-2">
+      <div className="form-group">
+        <label>Machine Name:</label>
         <input
           type="text"
           value={machineName}
           onChange={(e) => setMachineName(e.target.value)}
-          className="border p-1 w-full"
+          placeholder="Machine Name"
+          className="border p-2"
           required
         />
       </div>
-      <div className="mb-2">
-        <label className="block">User Name:</label>
+      <div className="form-group">
+        <label>User Name:</label>
         <input
           type="text"
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
-          className="border p-1 w-full"
+          placeholder="User Name"
+          className="border p-2"
           required
         />
       </div>
-      <div className="mb-2">
-        <label className="block">Start Time:</label>
+      <div className="form-group">
+        <label>Start Time:</label>
         <input
           type="datetime-local"
           value={startTime}
           onChange={(e) => setStartTime(e.target.value)}
-          className="border p-1 w-full"
+          placeholder="Start time"
+          className="border p-2"
           required
         />
       </div>
-      <div className="mb-2">
-        <label className="block">End Time:</label>
+      <div className="form-group">
+        <label>End Time:</label>
         <input
           type="datetime-local"
           value={endTime}
           onChange={(e) => setEndTime(e.target.value)}
-          className="border p-1 w-full"
+          placeholder="End time"
+          className="border p-2"
           required
         />
       </div>
-      <button type="submit" className="bg-green-500 text-white p-2">
+      <button type="submit" className="bg-green-500 text-white p-1">
         Add Reservation
       </button>
     </form>
