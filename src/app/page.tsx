@@ -31,11 +31,12 @@ const Home: React.FC = () => {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-3xl font-bold">Gym Machine Reservation Management</h1>
+      <div className="flex justify-center">
+      <br/>
+        <h1 className="text-3xl font-bold">Gym Machine Reservation Management</h1>
+      </div>
+      <br/>
       <AddReservation onAddReservation={fetchReservations} />
-      <button className="bg-blue-500 text-white p-2 mt-2" onClick={fetchReservations}>
-        List Reservations
-      </button>
       <ReservationList reservations={reservations} onUpdateReservation={fetchReservations} />
     </div>
   );
