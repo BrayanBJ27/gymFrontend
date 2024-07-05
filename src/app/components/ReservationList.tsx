@@ -33,7 +33,7 @@ const ReservationList: React.FC<ReservationListProps> = ({ reservations, onUpdat
 
   const handleSave = async (reservation: Reservation) => {
     try {
-      await axios.put(`http://localhost:8089/reservations/${reservation.id}`, {
+      await axios.put(`http://localhost:8090/reservations/${reservation.id}`, {
         machineName: newMachineName,
         userName: newUserName,
         startTime: newStartTime,
