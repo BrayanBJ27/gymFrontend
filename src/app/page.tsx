@@ -18,7 +18,7 @@ const Home: React.FC = () => {
 
   const fetchReservations = async () => {
     try {
-      const response = await axios.get("http://localhost:8083/reservations");
+      const response = await axios.get("http://localhost:8090/reservations");
       setReservations(response.data);
     } catch (error) {
       console.error("Error fetching reservations:", error);
