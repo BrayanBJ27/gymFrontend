@@ -14,14 +14,6 @@
    - [Clone the Repository](#clone-the-repository)
    - [Install Dependencies](#install-dependencies)
    - [Run the Development Server](#run-the-development-server)
-   - [Evidence](#evidence-create)
-3. [Usage](#usage)
-   - [Verify Server Functionality](#verify-server-functionality)
-   - [Add a New Product](#add-a-new-product)
-4. [Program Execution](#program-execution)
-   - [Create Docker Image](#create-docker-image)
-5. [DockerHub](#dockerhub)
-   - [DockerHub Repository](#dockerhub-repository)
 
 ## Project Description
 This project is a frontend application built using Next.js, designed for managing a gym's reservations. It includes components for adding reservations and displaying a list of reservations. The project uses TypeScript, Tailwind CSS for styling, and ESLint for code quality.
