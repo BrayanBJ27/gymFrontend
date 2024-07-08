@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  add-reserve-service:
+    image: c22c5320fec3
+    container_name: add-reserve-service
+    ports:
+      - "8088:8088"
+    environment:
+      - DB_HOST='mysql-programaciondis.alwaysdata.net
+      - DB_USER=357676_bj
+      - DB_PASSWORD=Uyt:tBHLgt4Kk_E
+      - DB_NAME=programaciondis_gym
+    networks:
+      - gym-network
+
+  list-reserve-service:
+    image: 9626aa8b1cf2
+    container_name: list-reserve-service
+    ports:
+      - "8089:8089"
+    environment:
+      - DB_HOST='mysql-programaciondis.alwaysdata.net
+      - DB_USER=357676_bj
+      - DB_PASSWORD=Uyt:tBHLgt4Kk_E
+      - DB_NAME=programaciondis_gym
+    networks:
+      - gym-network
+
+  update-reserve-service:
+    image: ca36af4e3456
+    container_name: update-reserve-service
+    ports:
+      - "8090:8090"
+    environment:
+      - DB_HOST='mysql-programaciondis.alwaysdata.net
+      - DB_USER=357676_bj
+      - DB_PASSWORD=Uyt:tBHLgt4Kk_E
+      - DB_NAME=programaciondis_gym
+    networks:
+      - gym-network
+
+  gym-frontend:
+    image: 148f32ba6cdf
+    container_name: gym-frontend
+    ports:
+      - "3003:3003"
+    networks:
+      - gym-network
+
+networks:
+  gym-network:
+    driver: bridge
