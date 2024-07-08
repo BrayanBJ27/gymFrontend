@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  add-reserve-service:
-    image: c22c5320fec3
-    container_name: add-reserve-service
+  gymadd:
+    image: 6bf82afdbfbb
+    container_name: gymadd
     ports:
       - "8088:8088"
     environment:
@@ -14,9 +14,9 @@ services:
     networks:
       - gym-network
 
-  list-reserve-service:
+  gymlist:
     image: 9626aa8b1cf2
-    container_name: list-reserve-service
+    container_name: gymlist
     ports:
       - "8089:8089"
     environment:
@@ -27,9 +27,9 @@ services:
     networks:
       - gym-network
 
-  update-reserve-service:
+  gymupdate:
     image: ca36af4e3456
-    container_name: update-reserve-service
+    container_name: gymupdate
     ports:
       - "8090:8090"
     environment:
@@ -40,9 +40,9 @@ services:
     networks:
       - gym-network
 
-  gym-frontend:
+  gymfrontend:
     image: 148f32ba6cdf
-    container_name: gym-frontend
+    container_name: gymfrontend
     ports:
       - "3003:3003"
     networks:
