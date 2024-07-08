@@ -215,3 +215,4 @@ This will successfully login you into your AWS ECR repository.**
 
 **We make a change and check the console to verify that everything is working correctly**
 ![Imagen de WhatsApp 2024-07-07 a las 23 33 59_f8f1d2bc](https://github.com/BrayanBJ27/gymFrontend/assets/87538474/7701caea-3027-42a6-8795-7eca886b039d)
+![Imagen de WhatsApp 2024-07-07 a las 23 34 14_b264af87](https://github.com/BrayanBJ27/gymFrontend/assets/87538474/b63ecfcb-f4de-41de-8ba9-62a2e005b9c4)
