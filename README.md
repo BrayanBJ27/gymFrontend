@@ -1,5 +1,5 @@
 # RESERVATIONS MACHINE GYM FITNESS BODY FRONTEND
-
+![image](https://github.com/BrayanBJ27/gymFrontend/assets/87538474/b13f9d46-2c1f-4127-bbbd-c4477d8ef33f)
 
 ## Group Members
 
