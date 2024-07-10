@@ -16,7 +16,7 @@ const AddReservation: React.FC<AddReservationProps> = ({ onAddReservation }) => 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post("http://3.142.244.153:8088/reservations", {
+      await axios.post("http://3.130.35.128:8088/reservations", {
         machineName,
         userName,
         startTime,
