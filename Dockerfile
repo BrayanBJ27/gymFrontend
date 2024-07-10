@@ -1,23 +1,19 @@
-# Use the official Node.js image
-FROM node:18-alpine
-
-# Set the working directory
+# Step 1: Build React App
+FROM node:alpine3.18 as build
 WORKDIR /app
-
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-# Install dependencies
+COPY package.json .
 RUN npm install
-
-# Copy the rest of the application code
 COPY . .
-
-# Build the Next.js application
 RUN npm run build
 
-# Expose the port the app runs on
-EXPOSE 3003
-
-# Start the Next.js application
-CMD ["npm", "start"]
+# Step 2: Server With Nginx
+FROM nginx:1.23-alpine
+WORKDIR /usr/share/nginx/html
+RUN rm -rf *
+COPY --from=build /app/.next /usr/share/nginx/html/_next
+COPY --from=build /app/public /usr/share/nginx/html/public
+COPY --from=build /app/.next/server/app/index.html /usr/share/nginx/html/index.html
+COPY nginx.conf /etc/nginx/nginx.conf
+RUN chmod -R 755 /usr/share/nginx/html
+EXPOSE 80
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
