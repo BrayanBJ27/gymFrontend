@@ -50,7 +50,7 @@ const ReservationList: React.FC<ReservationListProps> = ({ reservations, onUpdat
     <div>
       <br/>
       <div className="flex justify-center">
-        <h2 className="text-2xl font-bold mb-4">Reservations</h2>
+        <h2 className="text-2xl font-bold mb-4">Reservations in Time Real</h2>
       </div>
       <table className="min-w-full bg-white">
         <thead>
